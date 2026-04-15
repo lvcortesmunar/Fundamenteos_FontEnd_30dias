@@ -1,0 +1,59 @@
+🟢 DÍA 3 — NAVEGACIÓN (NAVBAR)
+🎯 Objetivo
+
+Crear navegación básica entre secciones.
+
+🧠 Introducción
+
+Una web real siempre tiene:
+
+navegación → moverse dentro de la página
+
+💻 Código completo
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dia 3</title>
+</head>
+<body>
+
+<header>
+  <h1>Mi web</h1>
+  <nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#servicios">Servicios</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+</header>
+
+<main>
+
+  <section id="inicio">
+    <h2>Inicio</h2>
+    <p>Contenido inicio</p>
+  </section>
+
+  <section id="servicios">
+    <h2>Servicios</h2>
+    <p>Contenido servicios</p>
+  </section>
+
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <p>Contenido contacto</p>
+  </section>
+
+</main>
+
+<footer>
+  <p>Footer</p>
+</footer>
+
+</body>
+</html>
+
+✅ Checklist
+ Los links hacen scroll
+ Cada sección tiene ID
+ Entiendes navegación interna
