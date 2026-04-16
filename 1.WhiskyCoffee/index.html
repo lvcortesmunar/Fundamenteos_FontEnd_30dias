@@ -1,194 +1,226 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="UTF-8">
-  <title>whiskyCoffee</title>
-
+  <title>Whisky & Coffee Neat</title>
   <link rel="stylesheet" href="styles.css">
-  <!--<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap" rel="stylesheet">-->
 </head>
 
 <body>
 
-  <header>
-    <!--<img src="Logo.png" alt="logo Whisky & Coffee Neat ">-->
-    <nav class="header">
-      <a href="#aprende">Aprende</a>
-      <a href="#vive">Vive</a>
-      <a href="#compra">Compra</a>
-      <a href="#reserva">Reserva</a>
-    </nav>
-  
-  </header>
+<header class="header">
+  <nav aria-label="Navegación principal">
+    <ul class="nav-list">
+      <li><a href="#aprende">Aprende</a></li>
+      <li><a href="#vive">Vive</a></li>
+      <li><a href="#compra">Compra</a></li>
+      <li><a href="#reserva">Reserva</a></li>
+    </ul>
+  </nav>
+</header>
 
-  <main>
-    <section>
-      <img class="hero" src="Hero.png" alt="">
-      <p>Aprende - Vive - Compra</p>
-      <h1>Whisky & Coffee Neat</h1>
-      <p>Es una plataforma donde el café y el whisky se encuentran. Descubre, aprende y
-        disfruta sin complicaciones.</p>
-        <button>Explora</button>
-        <button>Vive nuestras experiencias</button>
-    </section>
+<main>
 
-    <section class="aprende" id="aprende">
-      <h2>Aprende</h2>
-      <p>Contenido básico y avanzado para que descubras el arte detrás de cada taza y cada copa.</p>
+  <!-- HERO -->
+  <section class="hero">
+    <img src="Hero.png" alt="Whisky y café experiencia">
 
-      <article class="aprendeCafe">
-        <img class="aprendec" src="AprendeC.png" alt="">
-        <h3>Café de Especialidad</h3>
-        <p>Desde los orígenes del grano hasta métodos de preparación: pour over, prensa francesa, Chemex, AeroPress y
-          más.</p>
-        <ul>
-          <li>Orígenes y variedades</li>
-          <li>Métodos de extracción</li>
-          <li>Cata y perfiles de sabor</li>
-          <li>Recetas para casa</li>
-        </ul>
-      </article>
+    <p>Aprende · Vive · Compra</p>
 
-      <article class="aprendeWhisky">
-        <img class="aprendew" src="AprendeW.png" alt="">
-        <h3>Whisky & Licores</h3>
-        <p>Descubre el mundo de los destilados: scotch, bourbon, rye y los secretos detrás de cada botella.</p>
-        <ul>
-          <li>Tipos y regiones</li>
-          <li>Proceso de destilación</li>
-          <li>Maridaje con café</li>
-          <li>Degustación guiada</li>
-        </ul>
-      </article>
-    </section>
+    <h1>Whisky & Coffee Neat</h1>
 
-    <section class="vive" id="vive">
-      <img class="vive" src="Vive.png" alt="">
-      <p>Comunidad</p>
-      <h2>Vive la experiencia</h2>
-      <p>Más que aprender, queremos que lo vivas. Nuestros clubs y eventos presenciales te conectan con personas que
-        comparten la misma pasión.</p>
+    <p>
+      Es una plataforma donde el café y el whisky se encuentran.
+      Descubre, aprende y disfruta sin complicaciones.
+    </p>
+
+    <a href="#aprende" class="btn">Explora</a>
+    <a href="#vive" class="btn btn-secondary">Vive nuestras experiencias</a>
+  </section>
+
+  <!-- APRENDE -->
+  <section id="aprende">
+    <h2>Aprende</h2>
+    <p>Contenido básico y avanzado sobre café y whisky.</p>
+
+    <article>
+      <img src="AprendeC.png" alt="Café de especialidad">
+      <h3>Café de Especialidad</h3>
+      <p>Desde el origen del grano hasta métodos de preparación.</p>
+
       <ul>
-        <li>
-          <img src="clubC" alt="Club de Café">
+        <li>Orígenes y variedades</li>
+        <li>Métodos de extracción</li>
+        <li>Cata y perfiles de sabor</li>
+        <li>Recetas para casa</li>
+      </ul>
+    </article>
+
+    <article>
+      <img src="AprendeW.png" alt="Whisky y licores">
+      <h3>Whisky & Licores</h3>
+      <p>Explora scotch, bourbon, rye y más.</p>
+
+      <ul>
+        <li>Tipos y regiones</li>
+        <li>Proceso de destilación</li>
+        <li>Maridaje con café</li>
+        <li>Degustación guiada</li>
+      </ul>
+    </article>
+  </section>
+
+  <!-- VIVE -->
+  <section id="vive">
+    <img src="Vive.png" alt="Comunidad whisky y café">
+
+    <p>Comunidad</p>
+    <h2>Vive la experiencia</h2>
+
+    <p>
+      Más que aprender, queremos que lo vivas.
+    </p>
+
+    <ul class="cards">
+      <li>
+        <article>
+          <img src="clubC.png" alt="Club de café">
           <h3>Club de Café</h3>
-          <p>Sesiones mensuales para explorar orígenes, catar y preparar como un barista profesional.</p>
-        </li>
-        <li>
-          <img src="clubW" alt="Club de Café">
-          <h3>Club de Café</h3>
-          <p>Degustaciones guiadas con expertos. Aprende a distinguir notas, añejamientos y maridajes.</p>
-        </li>
-        <li>
-          <img src="eventosPrivados" alt="Eventos Privados">
+          <p>Sesiones mensuales para aprender como barista.</p>
+        </article>
+      </li>
+
+      <li>
+        <article>
+          <img src="clubW.png" alt="Club de whisky">
+          <h3>Club de Whisky</h3>
+          <p>Degustaciones guiadas con expertos.</p>
+        </article>
+      </li>
+
+      <li>
+        <article>
+          <img src="eventosPrivados.png" alt="Eventos privados">
           <h3>Eventos Privados</h3>
-          <p>Experiencias personalizadas para grupos, empresas o celebraciones especiales.</p>
-        </li>
-      </ul>
-    </section>
+          <p>Experiencias personalizadas para grupos.</p>
+        </article>
+      </li>
+    </ul>
+  </section>
 
-    <section class="compra" id="compra">
-      <h2>Compra</h2>
-      <p>Productos seleccionados para llevar la experiencia a tu hogar.</p>
-      <img class="compra" src="Compra.png" alt="Compra">
-      <ul>
-        <Article>
-          <button>
-            <img src="" alt="icono">
-            <h3>Café Colombia Especial</h3>
-            <p>Café</p>
-            <p>$32.000</p>
-          </button>
-        </Article>
-        <Article>
-          <button>
-            <img src="" alt="icono">
-            <h3>Whisky Single Malt 12 Años</h3>
-            <p>Whisky</p>
-            <p>$185.000</p>
-          </button>
-        </Article>
-        <Article>
-          <button>
-            <img src="" alt="icono">
-            <h3>Kit Barista en Casa</h3>
-            <p>Accesorios</p>
-            <p>$89.000</p>
-          </button>
-        </Article>
-        <Article>
-          <button>
-            <img src="" alt="icono">
-            <h3>Blend Signature W&C</h3>
-            <p>Cafés</p>
-            <p>$45.000</p>
-          </button>
-        </Article>
+  <!-- COMPRA -->
+  <section id="compra">
+    <h2>Compra</h2>
+    <p>Productos seleccionados para casa.</p>
 
-        <button>
-          <img src="" alt="icono">
-          Ver toda la tienda
-        </button>
-      </ul>
-    </section>
+    <img src="Compra.png" alt="Productos café y whisky">
 
-    <section class="reserva" id="reserva">
+    <ul class="products">
 
-      <form>
-        <h2>Reservas</h2>
-        <p>Reserva tu lugar en nuestras experiencias o programa un pedido para recoger o recibir en casa.</p>
-        <input type="text" placeholder="Nombre">
-        <input type="email" placeholder="Email">
-        <br><br>
+      <li>
+        <article>
+          <h3>Café Colombia Especial</h3>
+          <p>Café</p>
+          <p>$32.000</p>
+        </article>
+      </li>
+
+      <li>
+        <article>
+          <h3>Whisky Single Malt 12 Años</h3>
+          <p>Whisky</p>
+          <p>$185.000</p>
+        </article>
+      </li>
+
+      <li>
+        <article>
+          <h3>Kit Barista en Casa</h3>
+          <p>Accesorios</p>
+          <p>$89.000</p>
+        </article>
+      </li>
+
+      <li>
+        <article>
+          <h3>Blend Signature W&C</h3>
+          <p>Café</p>
+          <p>$45.000</p>
+        </article>
+      </li>
+
+    </ul>
+
+    <a href="#tienda" class="btn">Ver toda la tienda</a>
+  </section>
+
+  <!-- RESERVA -->
+  <section id="reserva">
+    <h2>Reservas</h2>
+
+    <p>Reserva tu experiencia.</p>
+
+    <form>
+      <label>
+        Nombre
+        <input type="text" name="nombre">
+      </label>
+
+      <label>
+        Email
+        <input type="email" name="email">
+      </label>
+
+      <label>
+        Experiencia
         <select name="experiencia">
-          <option value="">Selecciona una experiecia</option>
-          <option value="junior">Club Cafe - 12 Abril Degustaciones</option>
-          <option value="junior">Club Cafe - 13 Abril Metodos de preparacion</option>
-          <option value="junior">Club Wisky - 14 Abril Degustaciones</option>
-          <option value="semi">Club Wisky - 15 Abril Coteleria</option>
-          <option value="senior">Evento privado</option>
+          <option value="">Selecciona una experiencia</option>
+          <option>Club Café - Degustaciones</option>
+          <option>Club Café - Métodos</option>
+          <option>Club Whisky - Degustaciones</option>
+          <option>Evento privado</option>
         </select>
-        <br><br>
-        <input type="number" placeholder="Numero de Personas" min="1">
-        <br><br>
-        <input type="text" placeholder="Cometarios o peticiones especiales">
-        <br><br>
-        <button type="submit">Confirmar reserva</button>
-      </form>
-    </section>
-  </main>
-  <div>
+      </label>
+
+      <label>
+        Número de personas
+        <input type="number" min="1">
+      </label>
+
+      <label>
+        Comentarios
+        <input type="text">
+      </label>
+
+      <button type="submit">Confirmar reserva</button>
+    </form>
+  </section>
+
+</main>
+
+<footer>
+  <h3>Whisky & Coffee Neat</h3>
+
+  <p>Aprende, vive la experiencia y compra.</p>
+
+  <nav aria-label="Navegación del pie de página">
     <ul>
-      <li>Disponible de miércoles a domingo</li>
-      <li>Sesiones de 2 a 3 horas</li>
-      <li>Bogotá, Colombia</li>
+      <li><a href="#aprende">Aprende</a></li>
+      <li><a href="#vive">Vive</a></li>
+      <li><a href="#compra">Compra</a></li>
+      <li><a href="#reserva">Reserva</a></li>
     </ul>
-  </div>
+  </nav>
 
+  <address>
+    <p>@whiskycoffeeneat</p>
+    <p>hola@whiskycoffeeneat.com</p>
+    <p>+57 300 123 4567</p>
+  </address>
 
-  <footer>
+  <small>© 2026 Whisky & Coffee Neat</small>
+</footer>
 
-    <h3>Whisky & Coffee Neat</h3>
-    <p>Aprende, vive la experiencia y compra. Todo en un solo lugar, sin complicaciones.</p>
-
-    <h3>Navega</h3>
-    <nav class="footer">
-      <a href="#aprende">Aprende</a>
-      <a href="#vive">Vive</a>
-      <a href="#compra">Compra</a>
-      <a href="#reserva">Reserva</a>
-    </nav>
-
-    <h3>Contactanos</h3>
-    <ul>
-      <li>@whiskycoffeeneat</li>
-      <li>Hola@whiskycoffeeneat.com</li>
-      <li>+57 300 123 4567</li>
-    </ul>
-
-    <p> <em>© 2026 Whisky & Coffee Neat. Todos los derechos reservados.</em></p>
-  </footer>
 </body>
-
 </html>
