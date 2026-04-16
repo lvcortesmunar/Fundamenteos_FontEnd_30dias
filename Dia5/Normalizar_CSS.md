@@ -1,0 +1,67 @@
+/* Reset universal: */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Evita problemas con imágenes */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Evita inconsistencias de tipografía base */
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+/* Base del documento */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  color: #111;
+  background-color: #fff;
+}
+
+/* Listas sin estilos por defecto */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Links limpios */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Botones consistentes */
+button {
+  font: inherit;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+/* Formularios consistentes */
+input,
+select,
+textarea {
+  font: inherit;
+  outline: none;
+}
+
+/* Evita bordes raros en elementos interactivos */
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+}
+
+/* Mejor control de scroll en páginas largas */
+html, body {
+  height: 100%;
+}
