@@ -1,8 +1,11 @@
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
+
 
 /* Evita problemas con imágenes */
 img {
@@ -17,6 +20,7 @@ html {
 }
 
 /* Base del documento */
+
 body {
   font-family: Arial, sans-serif;
   line-height: 1.5;
@@ -30,7 +34,7 @@ ol {
   list-style: none;
 }
 
-/* Links limpios */
+/* Links limpios *
 a {
   text-decoration: none;
   color: inherit;
