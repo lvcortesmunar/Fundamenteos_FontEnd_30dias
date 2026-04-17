@@ -20,7 +20,7 @@ html {
 
 body {
   margin: 0;
-  font-family: Georgia, "Times New Roman", serif;  /* tipografía base */
+  font-family: Arial, Helvetica, sans-serif;  /* tipografía base */
   line-height: 1.5;  /* mejora legibilidad */
   color: #F2EDE3;  /* color de texto principal */
   background-color: #171514;  /* fondo general */
@@ -228,7 +228,7 @@ color: whitesmoke;
       rgba(0, 0, 0, 0.5),   /* Capa oscura arriba (mejora legibilidad) */
       rgba(0, 0, 0, 0.5)    /* Capa oscura abajo */
     ),
-    url(Hero.png);          /* Imagen de fondo del hero */
+    url(Assets/Hero.png);          /* Imagen de fondo del hero */
 
   background-size: cover;       /* La imagen cubre todo el contenedor */
   background-position: center;  /* La imagen se centra */
