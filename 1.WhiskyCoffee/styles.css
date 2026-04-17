@@ -1,131 +1,160 @@
+/*
+ordenar las propiedades dentro de cada selector siguiendo jerarquía profesional de decisión (estructura → layout → box model → visual → tipografía → interacción).*/
+
 /*==============================================================================
-  1. RESET & BASE
+  1. RESET & BASE - sin estilos por defecto
+  reset - html/body - tipografía base - imágenes
 ==============================================================================*/
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  box-sizing: border-box;  /* incluye padding y border dentro del tamaño */
+  margin: 0;  /* elimina márgenes por defecto */
+  padding: 0;  /* elimina padding por defecto */
 }
 
 /* Evita inconsistencias de tipografía base */
 html {
-  font-size: 16px;
-  scroll-behavior: smooth;
+  font-size: 16px;  /* base para rem */
+  scroll-behavior: smooth;  /* scroll suave al navegar */
 }
 
 body {
-  font-family: Georgia, "Times New Roman", serif;
-  line-height: 1.5;
-  color: #F2EDE3;
-  background-color: #171514;
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;  /* tipografía base */
+  line-height: 1.5;  /* mejora legibilidad */
+  color: #F2EDE3;  /* color de texto principal */
+  background-color: #171514;  /* fondo general */
 }
 
-/* Evita problemas con imágenes */
-img {
-  max-width: 100%;
-  display: block;
-  object-fit: cover;
+/* Links limpios */
+a {
+  display: inline-block;  /* permite padding/margen */
+  text-decoration: none;  /* quita subrayado */
+  color: inherit;  /* hereda color del padre */
 }
 
 /* Listas sin estilos por defecto */
 ul,
 ol {
-  list-style: none;
+  list-style: none;  /* quita viñetas */
 }
 
-/* Links limpios */
-a {
-  text-decoration: none;
-  color: inherit;
+/* Evita problemas con imágenes */
+img {
+  display: block;  /* elimina espacios inline */
+  max-width: 100%;  /* responsive */
+  object-fit: cover;  /* evita deformación */
 }
 
 /*==============================================================================
-  2. DESIGN TOKENS (VARIABLES)
+  2. DESIGN TOKENS (VARIABLES) 
+  colores - fuentes - spacing - tipografia - tamaños
 ==============================================================================*/
 
 :root {
+ 
+  /*===COLORES BASE==*/
+  --bg: rgba(20, 17, 13, 1);        /* Fondo general */
+  --surface: rgba(28, 24, 20, 1);   /* Cards / inputs */
 
-  /*Texto*/
-  --font-title: "Playfair Display", serif;
-  --txt-primary: #D98C26;
-  --txt-foreground: #F2EDE3;
-  --txt-muted: #9C8F7A;
+  /*===Texto==*/
+  --font: "Libre Bodoni", serif;
+  --text: rgba(242, 229, 204, 1);   /* Texto principal */
+  --muted: rgba(166, 150, 120, 1);  /* Texto secundario */
+  --txtp: rgb(181, 191, 181);
 
-  
+   --h1: var(--text);  /* Título principal */
+   --h2: var(--text);  /* Título secundario */
+   --h3: var(--muted);  /* Subtítulo */
+   --p: var(--txtp);  /* Párrafo */
+
+
+   --link: var(--primary);        /* Color del enlace */
+   --link-hover: var(--text);     /* Hover del enlace */
+
+/*===Colores principales==*/
+  --primary: rgba(204, 142, 51, 1);  /* Color principal (oro oscuro) */
+  --border: rgba(77, 70, 61, 1);     /* Bordes */
+
+  /*===Botones==*/
+   --btn-bg: var(--primary);              /* Fondo del botón */
+   --btn-text: var(--bg);                 /* Texto del botón */
+   --btn-hover: rgba(224, 162, 71, 1);         /* Hover del botón */
+   --btn-border: var(--primary);         /* Borde del botón */
+
+  /*===Inputs==*/
+   --input-bg: var(--surface);     /* Fondo del input */
+   --input-text: var(--text);      /* Texto del input */
+   --input-border: var(--border);   /* Borde del input */
+
+  /*===Espaciados==*/
+   --space-sm: 8px;   /* Espaciado pequeño */
+   --space-md: 16px;     /* Espaciado medio */
+   --space-lg: 32px;     /* Espaciado grande */
+
 }
 
 /*==============================================================================
-  3. TYPOGRAPHY SYSTEM
+  3. CONTENIDO
 ==============================================================================*/
 
 h1,
 h2,
-h3 {
-  font-family: var(--font-title);
+h3,
+p {
+  margin: 0;
+  padding-inline: 0;
+
+  font-family: var(--font);  /* tipografía de títulos */
 }
 
 h1 {
-  color: var(--txt-primary);
+  font-size: 40px;
+  line-height: 1.2;
+  color: var(--h1);
 }
 
 h2 {
-  color: var(--txt-foreground);
+  font-size: 32px;
+  line-height: 1.3;
+  color: var(--h2);
 }
 
 h3 {
-  color: var(--txt-muted);
+  font-size: 20px;
+  line-height: 1.4;
+  color: var(--h3);
 }
 
 p {
-  font-family: var(--font-title);
-  color: var(--txt-foreground);
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--p);
+  margin-bottom: var(--space-sm);
 }
 
 /*==============================================================================
-  4. LAYOUT MEDIA (IMÁGENES POR SECCIÓN)
+  4. UI SYSTEM
+  inputs - links - botones
 ==============================================================================*/
 
-/* HERO */
-.hero img {
-  width: 100%;
-  height: 500px;
-}
-
-/* APRENDE CAFÉ */
-.aprendec img {
-  width: 100%;
-  height: 100%;
-}
-
-/* APRENDE WHISKY */
-.aprendew img {
-  width: 100%;
-  height: 100%;
-}
-
-/* VIVE */
-.vive img {
-  width: 100%;
-  height: 500px;
-}
-
-/* COMPRA */
-.compra img {
-  width: 100%;
-  height: 400px;
-}
-
-/*==============================================================================
-  5. UI SYSTEM (FORMULARIOS & INTERACCIÓN)
-==============================================================================*/
-
-/* Botones consistentes */
-button {
+/* Botones base */
+button,
+.btn {
+  cursor: pointer;  /* indica interacción */
   font: inherit;
-  border: none;
-  background: none;
-  cursor: pointer;
+  padding: var(--space-sm) var(--space-md);  /* tamaño clickeable */
+  border: 1px solid var(--btn-border);
+  background-color: var(--btn-bg);
+  color: var(--btn-text);
+  transition: all 0.3s ease;  /* animación suave */
+}
+
+/* Hover (feedback visual) */
+button:hover,
+.btn:hover {
+  background-color: var(--btn-hover);  /* cambia fondo */
+  color: var(--btn-text-hover);  /* cambia texto */
 }
 
 /* Formularios consistentes */
@@ -133,23 +162,173 @@ input,
 select,
 textarea {
   font: inherit;
-  outline: none;
+  padding: var(--space-sm);  /* área cómoda */
+  border: 1px solid var(--txt-muted);
+  background: transparent;
+  color: var(--txt-foreground);
 }
 
-/* Focus accesible (IMPORTANTE en producción) */
-button:focus,
-input:focus,
-select:focus,
-textarea:focus {
-  outline: 2px solid var(--txt-primary);
-  outline-offset: 2px;
-}
 
 /*==============================================================================
-  6. LAYOUT BASE HELPERS (PRE FLEXBOX READY)
+  5. ESTRUCTURA HTML
 ==============================================================================*/
 
-html,
-body {
-  height: 100%;
+/*===BARRA DE NAVEGACION===*/
+/* HEADER (contenedor principal de la barra) */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-md);
 }
+
+/* LOGO */
+.logo {
+  margin: 0;
+  font-size: 20px;
+  color: rgb(237, 190, 94);
+}
+
+/* Parte destacada del logo */
+.logoNeat {
+color: whitesmoke;
+}
+
+/* NAV LIST (menú horizontal) */
+.nav-list {
+  display: flex;
+  gap: 1rem;
+}
+
+/* LINKS */
+.nav-list a {
+  color: rgb(137, 147, 137);
+}
+
+/* Efecto hover */
+.nav-list a:hover {
+  color: var(--txt-primary);
+}
+
+/*===HERO===*/
+.hero {
+  width: 100%;              /* Ocupa todo el ancho de la pantalla */
+  height: 80vh;             /* Ocupa el 80% de la altura de la ventana */
+
+  display: flex;            /* Activa flexbox para organizar contenido */
+  flex-direction: column;   /* Coloca los elementos en columna (uno debajo del otro) */
+
+  justify-content: center;  /* Centra el contenido verticalmente */
+  align-items: center;      /* Centra el contenido horizontalmente */
+
+  text-align: center;       /* Centra el texto dentro del bloque */
+
+  background-image:
+    linear-gradient(
+      rgba(0, 0, 0, 0.5),   /* Capa oscura arriba (mejora legibilidad) */
+      rgba(0, 0, 0, 0.5)    /* Capa oscura abajo */
+    ),
+    url(Hero.png);          /* Imagen de fondo del hero */
+
+  background-size: cover;       /* La imagen cubre todo el contenedor */
+  background-position: center;  /* La imagen se centra */
+  background-repeat: no-repeat;  /* Evita que la imagen se repita */
+}
+
+.slogan {
+  width: 100%;
+  font-size: 32px;
+  color: #D98C26;
+}
+
+.h1Hero {
+  width: 100%;  /* estructura / tamaño del bloque */
+
+  font-size: 83px;
+  font-weight: lighter;  /* tipografía */
+
+  color: #edbe5e;  /* visual */
+}
+
+.neatHero {
+  color: rgb(127,127,127);
+}
+
+.botonesHero {
+  display: flex;  /* estructura / layout */
+  justify-content: center;  /* alineación */
+  width: 100%;  /* tamaño del contenedor */
+  gap: 1rem;  /* espaciado entre elementos */
+}
+
+.btnHero {
+  padding: var(--space-sm) var(--space-md);  /* box model / tamaño interno */
+  border-radius: 8px;  /* forma visual */
+  background-color: var(--btn-bg);
+  color: var(--btn-text);  /* visual */
+
+  /* transition: 0.3s; */
+  /* interacción (comentada) */
+}
+
+/*
+.btnHero:hover {
+  background-color: var(--btn-hover); /* usa sistema de diseño */
+  /*color: var(--btn-text);
+}
+*/
+
+.btnHeroSecondary {
+  padding: var(--space-sm) var(--space-md);  /* box model / tamaño interno */
+
+  border-style: solid;
+  border-color: var(--primary);
+  border-radius: 8px;  /* forma y borde (estructura visual del componente) */
+
+  background-color: rgba(0, 0, 0, 0.5);  /* fondo (visual principal) */
+
+  color: var(--btn-bg);  /* tipografía / color de texto */
+}
+
+
+/*===APRENDE===*/
+
+#aprende {
+  width: 100%;  /* estructura / tamaño del contenedor */
+
+  display: flex;
+  flex-direction: column;  /* layout principal */
+
+  justify-content: center;
+  align-items: center;  /* alineación del contenido */
+
+  padding: var(--space-lg);  /* box model / espaciado interno */
+}
+
+.AprendeHeader {
+  text-align: center;  /* tipografía / alineación de texto */
+  margin-bottom: var(--space-lg);  /* separación externa */
+
+}
+
+.aprendeCards {
+  display: grid;  /* layout */
+  grid-template-columns: repeat(2, 1fr);  /* estructura de grid */
+  gap: var(--space-lg);  /* espaciado entre elementos */
+
+}
+
+.aprendeC,
+.aprendeW {
+  background-color: var(--surface);  /* visual */
+  border-radius: 10px;  /* forma */
+  padding: var(--space-md);    /* box model / espacio interno */
+
+}
+
+
+
+
+
+
+
