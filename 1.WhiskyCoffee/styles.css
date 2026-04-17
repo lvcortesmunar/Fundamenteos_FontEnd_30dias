@@ -55,7 +55,7 @@ img {
  
   /*===COLORES BASE==*/
   --bg: rgba(20, 17, 13, 1);        /* Fondo general */
-  --surface: rgba(28, 24, 20, 1);   /* Cards / inputs */
+  --surface: rgba(34, 31, 28,1);   /* Cards / inputs */
 
   /*===Texto==*/
   --font: "Libre Bodoni", serif;
@@ -210,7 +210,7 @@ color: whitesmoke;
   color: var(--txt-primary);
 }
 
-/*===HERO===*/
+/*========================================HERO===*/
 .hero {
   width: 100%;              /* Ocupa todo el ancho de la pantalla */
   height: 80vh;             /* Ocupa el 80% de la altura de la ventana */
@@ -281,17 +281,15 @@ color: whitesmoke;
 .btnHeroSecondary {
   padding: var(--space-sm) var(--space-md);  /* box model / tamaño interno */
 
-  border-style: solid;
-  border-color: var(--primary);
-  border-radius: 8px;  /* forma y borde (estructura visual del componente) */
-
+  border: 1.5px solid var(--primary);
+  border-radius: 8px;
   background-color: rgba(0, 0, 0, 0.5);  /* fondo (visual principal) */
 
   color: var(--btn-bg);  /* tipografía / color de texto */
 }
 
 
-/*===APRENDE===*/
+/*==================================APRENDE===*/
 
 #aprende {
   width: 100%;  /* estructura / tamaño del contenedor */
@@ -302,7 +300,7 @@ color: whitesmoke;
   justify-content: center;
   align-items: center;  /* alineación del contenido */
 
-  padding: var(--space-lg);  /* box model / espaciado interno */
+  padding: 80px;  /* box model / espaciado interno */
 }
 
 .AprendeHeader {
@@ -313,22 +311,25 @@ color: whitesmoke;
 
 .aprendeCards {
   display: grid;  /* layout */
-  grid-template-columns: repeat(2, 1fr);  /* estructura de grid */
+  grid-template-columns: repeat(2, 500px);  /* estructura de grid */
   gap: var(--space-lg);  /* espaciado entre elementos */
 
 }
 
-.aprendeC,
-.aprendeW {
+.cardAprendeC,
+.cardAprendeW {
   background-color: var(--surface);  /* visual */
-  border-radius: 10px;  /* forma */
+  border: 1.5px solid rgb(181, 191, 181);
+  border-radius: 8px; 
   padding: var(--space-md);    /* box model / espacio interno */
 
 }
 
+.h3AprendeC,
+.h3AprendeW{
+  color: var(--primary);
+}
 
-
-
-
+/*==================================VIVE===*/
 
 
