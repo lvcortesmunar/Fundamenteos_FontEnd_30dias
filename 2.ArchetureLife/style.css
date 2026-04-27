@@ -1,79 +1,90 @@
-
-    body {
+* {
+  box-sizing: border-box;  /* incluye padding y border dentro del tamaño */
+  margin: 0;  /* elimina márgenes por defecto */
+  padding: 0;  /* elimina padding por defecto */
+}
+body {
+  width: 100%;
+  height: 100%;
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;  /* tipografía base */
+ 
+  font-family: Georgia, 'Times New Roman', Times, serif;  /* tipografía base */
   line-height: 1.5;  /* mejora legibilidad */
   color: rgba(23, 21, 20, 1);  /* color de texto principal */
   background-color: rgba(250,250,250, 0.5);  /* fondo general */
 }
 
 
-    /* Listas sin estilos por defecto */
-    ul,
-    ol {
-      list-style: none;  /* quita viñetas */
-    }
-    
-    /* Links limpios */
-    a {
-      display: inline-block;  /* permite padding/margen */
-      text-decoration: none;  /* quita subrayado */
-      color: inherit;  /* hereda color del padre */
-    }
+/* Listas sin estilos por defecto */
+ul,
+ol {
+  list-style: none;  /* quita viñetas */
+}
+
+/* Links limpios */
+a {
+  text-decoration: none;  /* quita subrayado */
+ 
+}
+
+/*Imagenes ajustadas/resetadas*/
+img {
+  display: block;  /* elimina espacios inline */
+  max-width: 100%;  /* responsive */
+  object-fit: cover;  /* evita deformación */
+}
 
 
-  
-    /*<!-- ================= HEADER -->
+/*  <!-- ================= HEADER -->
     <header class="header">
 
         <nav class="nav">
-            <ul class="nav__list">
-                <li><a class="nav__link" href="#">Awards</a></li>
-                <li><a class="nav__link" href="#">Diseño</a></li>
-                <li><a class="nav__link" href="#">Arquitectura</a></li>
+            <ul class="navList">
+                <li><a class="navLink" href="#">Awards</a></li>
+                <li><a class="navLink" href="#">Diseño</a></li>
+                <li><a class="navLink" href="#">Arquitectura</a></li>
             </ul>
         </nav>
 
-        <a href="#" class="header__logo">
+        <a href="#" class="headerLogo">
             <img src="" alt="Architecture Life">
         </a>
 
         <form class="search" role="search">
-            <input class="search__input" type="search" placeholder="Buscar...">
+            <input class="searchInput" type="search" placeholder="Buscar...">
         </form>
 
     </header>*/
 
 
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 16px;
-}
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px;
+    }
+    
+    
 
-
-
-.nav__list {
+.navList {
   display: flex;
   gap: 1rem;
 }
 
 
-.nav-link {
+.navLink {
   color: rgb(137, 147, 137);
 }
 
 
 
-    /*<!-- ======================================= HERO -->
-<!--===================================================================================== HERO -->
+    /*   <!-------------------------------------------------------------------------- HERO -->
         <section class="hero">
-            <h1 class="hero__title">Un Museo Vivo de Admiración</h1>
-            <p class="hero__description">
-                Descubre, aprende e inspírate con una curaduría excepcional de arquitectura y diseño.
+            <h1 class="heroTitle">Un Museo Vivo de Admiración</h1>
+            <p class="heroDescription">
+                Descubre, aprende e inspírate con una curaduría sensorial de arquitectura y diseño.
             </p>
-            <a href="#" class="button">Explorar proyectos</a>
+            <a href="#" class="heroButton">Explorar proyectos</a>
         </section>
 */
 
@@ -100,8 +111,202 @@
 
     url(Assets/Hero4.png);           /* Imagen de fondo del hero */
 
-  background-size: cover;       /* La imagen cubre todo el contenedor */
+  background-size: full;       /* La imagen cubre todo el contenedor */
   background-position: center;  /* La imagen se centra */
   background-repeat: no-repeat;  /* Evita que la imagen se repita */
 }
+
+.heroTitle{
+  font-weight: lighter;
+  font-size: 64px;
+  color: #fff;
+}
+
+.heroDescription{
+  font-weight: lighter;
+  font-size: 24px;
+  color: #fff;
+}
+
+.heroButton{
+  width: fit-content;
+  padding:12px;
+  border-radius: 4px;
+  background-color: rgba(0,0,0,0.5);
+  color: #fff;
+  
+}
+
+
+
+/* 
+ <!--------------------------------------------------------------------------- PROYECTOS QUE INSPIRAN -->
+        <section class="proyectos">
+
+            <header class="projectosQueInspiranHeader">
+                <h2>Proyectos que inspiran</h2>
+            </header>
+
+            <section class="contenedorProjectosQueInspiran">
+
+                <article class="cardProyectosQueInspiran principal">
+                    <a href="#">
+                        <figure class="imgCardProyectosQueInspiran">
+                            <img src="Assets/PabellonContemporaneo.png" alt="Pabellon Contemporaneo">
+                        </figure>
+
+                        <div class="txtCard">
+                            <p class="cardMeta">Awards Abril 2023</p>
+                            <h3>Pabellon Contemporaneo</h3>
+                            <p>Un pabellon estructural que redefine la relación entre arquitectura y paisaje.</p>
+                        </div>
+                    </a>
+                </article>
+
+                <article class="cardProyectosQueInspiran secundaria">
+                    <a href="#">
+                        <figure class="imgCardProyectosQueInspiran">
+                            <img src="Assets/SaladeEstarContemporanea.png" alt="Sala de Estar Contemporanea">
+                        </figure>
+
+                        <div class="txtCard">
+                            <p class="cardMeta">Diseño Mayo 2023</p>
+                            <h3>Sala de Estar Contemporanea</h3>
+                            <p>Un espacio que fusiona lujo y funcionalidad.</p>
+                        </div>
+                    </a>
+                </article>
+
+            </section>
+*/
+
+.contenedorProjectosQueInspiran {
+    display: flex;
+    gap: 20px;
+    align-items: stretch;
+    padding-left: 64px;
+    padding-right: 64px;
+}
+
+.cardProyectosQueInspiran {
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-width: 0; /* 🔥 clave para que flex respete proporciones */
+}
+
+/* 75% */
+.cardProyectosQueInspiran.principal {
+    flex: 3 1 0;
+}
+
+/* 25% */
+.cardProyectosQueInspiran.secundaria {
+    flex: 1 1 0;
+}
+
+/* texto */
+.txtCard {
+    padding: 24px;
+}
+
+.txtCard h3{
+  
+    font-size: 24px;
+    font-weight: lighter;
+}
+
+.txtCard p{
+    font-size: 16px;
+}
+
+.cardMeta {
+  font-family:  Arial, Helvetica, sans-serif;
+    color: gray;
+    font-size: 6%;
+}
+
+/*<!------------------------------------------------------------------------ MAS PROYECTOS -->*/
+
+.contenedorProjectosQueNuncaPasanDeModa {
+    display: grid;
+   display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    
+    gap: 16px;
+    
+    padding-left: 64px;
+    padding-right: 64px;
+}
+
+.cardModa{
+  height: 800px;
+  background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.cardModa.uno {
+  
+    grid-column: span 2 / span 2;
+}
+
+.cardModa.dos {
+  
+    grid-column: span 2 / span 2;
+    grid-column-start: 3;
+}
+
+.cardModa.tres {
+  
+    grid-column: span 2 / span 2;
+    grid-column-start: 5;
+}
+
+.cardModa.cuatro {
+  
+    grid-column: span 3 / span 3;
+    grid-row-start: 2;
+}
+
+.cardModa.cinco {
+  
+    grid-column: span 3 / span 3;
+    grid-column-start: 4;
+    grid-row-start: 2;
+}
+
+.cardModa.seis {
+  
+    grid-column: span 4 / span 4;
+    grid-column-start: 2;
+    grid-row-start: 3;
+}
+
+
+
+.imgCardProyectosQueNuncaPasanDeModa {
+    width: 100%;
+    height: 80%; /* controla la altura de la imagen */
+    overflow: hidden;
+}
+
+.imgCardProyectosQueNuncaPasanDeModa img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    
+}
+
+
+
+
+
+
+
+
+
+
 
