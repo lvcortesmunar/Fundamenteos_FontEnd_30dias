@@ -1,37 +1,50 @@
 * {
-  box-sizing: border-box;  /* incluye padding y border dentro del tamaño */
-  margin: 0;  /* elimina márgenes por defecto */
-  padding: 0;  /* elimina padding por defecto */
+  box-sizing: border-box;
+  /* incluye padding y border dentro del tamaño */
+  margin: 0;
+  /* elimina márgenes por defecto */
+  padding: 0;
+  /* elimina padding por defecto */
 }
+
 body {
   width: 100%;
   height: 100%;
   margin: 0;
- 
-  font-family: Georgia, 'Times New Roman', Times, serif;  /* tipografía base */
-  line-height: 1.5;  /* mejora legibilidad */
-  color: rgba(23, 21, 20, 1);  /* color de texto principal */
-  background-color: rgba(250,250,250, 0.5);  /* fondo general */
+
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  /* tipografía base */
+  line-height: 1.5;
+  /* mejora legibilidad */
+  color: rgba(23, 21, 20, 1);
+  /* color de texto principal */
+  background-color: rgba(250, 250, 250, 0.5);
+  /* fondo general */
 }
 
 
 /* Listas sin estilos por defecto */
 ul,
 ol {
-  list-style: none;  /* quita viñetas */
+  list-style: none;
+  /* quita viñetas */
 }
 
 /* Links limpios */
 a {
-  text-decoration: none;  /* quita subrayado */
- 
+  text-decoration: none;
+  /* quita subrayado */
+
 }
 
 /*Imagenes ajustadas/resetadas*/
 img {
-  display: block;  /* elimina espacios inline */
-  max-width: 100%;  /* responsive */
-  object-fit: cover;  /* evita deformación */
+  display: block;
+  /* elimina espacios inline */
+  max-width: 100%;
+  /* responsive */
+  object-fit: cover;
+  /* evita deformación */
 }
 
 
@@ -57,14 +70,14 @@ img {
     </header>*/
 
 
-    .header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 16px;
-    }
-    
-    
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+}
+
+
 
 .navList {
   display: flex;
@@ -78,7 +91,7 @@ img {
 
 
 
-    /*   <!-------------------------------------------------------------------------- HERO -->
+/*   <!-------------------------------------------------------------------------- HERO -->
         <section class="hero">
             <h1 class="heroTitle">Un Museo Vivo de Admiración</h1>
             <p class="heroDescription">
@@ -89,54 +102,69 @@ img {
 */
 
 .hero {
-  width: 100%;              /* Ocupa todo el ancho de la pantalla */
-  height: 80vh;             /* Ocupa el 80% de la altura de la ventana */
+  width: 100%;
+  /* Ocupa todo el ancho de la pantalla */
+  height: 90vh;
+  /* Ocupa el 80% de la altura de la ventana */
 
-  display: flex;            /* Activa flexbox para organizar contenido */
-  flex-direction: column;   /* Coloca los elementos en columna (uno debajo del otro) */
+  display: flex;
+  /* Activa flexbox para organizar contenido */
+  flex-direction: column;
+  /* Coloca los elementos en columna (uno debajo del otro) */
 
-  justify-content: center;  /* Centra el contenido verticalmente */
+  justify-content: center;
+  /* Centra el contenido verticalmente */
   /*align-items: center;      /* Centra el contenido horizontalmente */
 
-  text-align: left;       /* Centra el texto dentro del bloque */
+  text-align: left;
+  /* Centra el texto dentro del bloque */
 
-  
-   padding: 64px;
 
- background-image:
-    linear-gradient(
-      rgba(157,157,157, 0.3),   /* Capa oscura arriba (mejora legibilidad) */
-      rgba(0, 0, 0, 0)    /* Capa oscura abajo */
+  padding: 64px;
+
+  background-image:
+    linear-gradient(rgba(157, 157, 157, 0.3),
+      /* Capa oscura arriba (mejora legibilidad) */
+      rgba(0, 0, 0, 0)
+      /* Capa oscura abajo */
     ),
 
-    url(Assets/Hero4.png);           /* Imagen de fondo del hero */
+    url(Assets/Hero4.png);
+  /* Imagen de fondo del hero */
 
-  background-size: full;       /* La imagen cubre todo el contenedor */
-  background-position: center;  /* La imagen se centra */
-  background-repeat: no-repeat;  /* Evita que la imagen se repita */
+  background-size: full;
+  /* La imagen cubre todo el contenedor */
+  background-position: center;
+  /* La imagen se centra */
+  background-repeat: no-repeat;
+  /* Evita que la imagen se repita */
 }
 
-.heroTitle{
+.heroTitle {
   font-weight: lighter;
   font-size: 64px;
   color: #fff;
 }
 
-.heroDescription{
+.heroDescription {
   font-weight: lighter;
   font-size: 24px;
   color: #fff;
 }
 
-.heroButton{
+.heroButton {
   width: fit-content;
-  padding:12px;
+  padding: 12px;
   border-radius: 4px;
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(0, 0, 0, 0.5);
   color: #fff;
-  
+
 }
 
+.proyectos {
+    padding-top: 144px;
+ 
+}
 
 
 /* 
@@ -181,132 +209,242 @@ img {
 */
 
 .contenedorProjectosQueInspiran {
-    display: flex;
-    gap: 20px;
-    align-items: stretch;
-    padding-left: 64px;
-    padding-right: 64px;
+  padding-top: 32px;
+  padding-bottom: 64px;
+  display: flex;
+  gap: 20px;
+  align-items: stretch;
+  padding-left: 64px;
+  padding-right: 64px;
 }
 
 .cardProyectosQueInspiran {
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    min-width: 0; /* 🔥 clave para que flex respete proporciones */
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  /* 🔥 clave para que flex respete proporciones */
 }
 
 /* 75% */
 .cardProyectosQueInspiran.principal {
-    flex: 3 1 0;
+  flex: 3 1 0;
 }
 
 /* 25% */
 .cardProyectosQueInspiran.secundaria {
-    flex: 1 1 0;
+  flex: 1 1 0;
 }
 
 /* texto */
 .txtCard {
-    padding: 24px;
+  padding: 24px;
 }
 
-.txtCard h3{
-  
-    font-size: 24px;
-    font-weight: lighter;
+.txtCard h3 {
+
+  font-size: 24px;
+  font-weight: lighter;
 }
 
-.txtCard p{
-    font-size: 16px;
+.txtCard p {
+  font-size: 16px;
 }
 
 .cardMeta {
-  font-family:  Arial, Helvetica, sans-serif;
-    color: gray;
-    font-size: 6%;
+  font-family: Arial, Helvetica, sans-serif;
+  color: gray;
+  font-size: 6%;
 }
 
 /*<!------------------------------------------------------------------------ MAS PROYECTOS -->*/
-
+.proyectosModa{
+background-color:rgba(244, 240, 237, 0.5);
+ padding-bottom: 144px;
+}
 .contenedorProjectosQueNuncaPasanDeModa {
-    display: grid;
-   display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    
-    gap: 16px;
-    
-    padding-left: 64px;
-    padding-right: 64px;
+  padding-top: 64px;
+  
+
+  display: grid;
+  padding-top: 32px;
+  padding-bottom: 64px;
+  grid-template-columns: repeat(6, 1fr);
+
+  gap: 16px;
+
+  padding-left: 64px;
+  padding-right: 64px;
 }
 
-.cardModa{
-  height: 800px;
+.cardModa {
+  height: 400px;
+  
+  padding-bottom: 88px;
   background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .cardModa.uno {
-  
-    grid-column: span 2 / span 2;
+
+  grid-column: span 2 / span 2;
 }
 
 .cardModa.dos {
-  
-    grid-column: span 2 / span 2;
-    grid-column-start: 3;
+
+  grid-column: span 2 / span 2;
+  grid-column-start: 3;
 }
 
 .cardModa.tres {
-  
-    grid-column: span 2 / span 2;
-    grid-column-start: 5;
+
+  grid-column: span 2 / span 2;
+  grid-column-start: 5;
 }
 
 .cardModa.cuatro {
-  
-    grid-column: span 3 / span 3;
-    grid-row-start: 2;
+
+  grid-column: span 3 / span 3;
+  grid-row-start: 2;
 }
 
 .cardModa.cinco {
-  
-    grid-column: span 3 / span 3;
-    grid-column-start: 4;
-    grid-row-start: 2;
+
+  grid-column: span 3 / span 3;
+  grid-column-start: 4;
+  grid-row-start: 2;
 }
 
 .cardModa.seis {
-  
-    grid-column: span 4 / span 4;
-    grid-column-start: 2;
-    grid-row-start: 3;
+
+  grid-column: span 4 / span 4;
+  grid-column-start: 2;
+  grid-row-start: 3;
 }
 
 
 
 .imgCardProyectosQueNuncaPasanDeModa {
-    width: 100%;
-    height: 80%; /* controla la altura de la imagen */
-    overflow: hidden;
+  width: 100%;
+  height: 80%;
+  /* controla la altura de la imagen */
+  overflow: hidden;
 }
 
 .imgCardProyectosQueNuncaPasanDeModa img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+
 }
 
 
+/*  <!-- ------------------------------------------------------------- FRASE ARQUITECTONICA -->
+        <blockquote class="fraseArquitectonica">
+            <p>"La arquitectura es el testigo menos reconocido de la historia"</p>
+            <cite>Octavio Paz</cite>
+        </blockquote>
+*/
 
 
+.fraseArquitectonica {
+  padding-top: 144px;
+  padding-bottom: 144px;
+  width: 100%;
+  /* Ocupa todo el ancho de la pantalla */
+
+  display: flex;
+  /* Activa flexbox para organizar contenido */
+  flex-direction: column;
+  /* Coloca los elementos en columna (uno debajo del otro) */
+
+  justify-content: center;
+  /* Centra el contenido verticalmente */
+  /*align-items: center;      /* Centra el contenido horizontalmente */
+
+  text-align: center;
+  /* Centra el texto dentro del bloque */
 
 
+  background-image:
+    linear-gradient(rgba(157, 157, 157, 0.3),
+      /* Capa oscura arriba (mejora legibilidad) */
+      rgba(0, 0, 0, 0)
+      /* Capa oscura abajo */
+    ),
 
+    url(Assets/OctavioPaz.png);
+  /* Imagen de fondo del hero */
 
+  background-size: cover;
+  /* La imagen cubre todo el contenedor */
+  background-position: center;
+  /* La imagen se centra */
+  background-repeat: no-repeat;
+  /* Evita que la imagen se repita */
+}
 
+/* <!------------------------------------------------------------------- NEWSLETTER -->
+        <section class="newsletter">
+            <h2>Inspírate cada semana</h2>
+            <p>Recibe lo mejor de la arquitectura y el diseño directamente en tu correo</p>
 
+            <form>
+                <label for="email" class="visuallyHidden">Correo</label>
+                <input id="email" type="email" placeholder="Tu correo">
+                <button type="submit">Inscribirse</button>
+            </form>
+        </section>
+    */
+
+.newsletter {
+  padding-top: 144px;
+  padding-bottom: 144px;
+  width: 100%;
+  /* Ocupa todo el ancho de la pantalla */
+
+  display: flex;
+  /* Activa flexbox para organizar contenido */
+  flex-direction: column;
+  /* Coloca los elementos en columna (uno debajo del otro) */
+
+  justify-content: center;
+  /* Centra el contenido verticalmente */
+  /*align-items: center;      /* Centra el contenido horizontalmente */
+
+  text-align: center;
+  /* Centra el texto dentro del bloque */
+
+background-color:rgba(244, 240, 237, 0.5);
+}
+
+/* <!-- FOOTER -->
+    <footer class="footer">
+
+        <section class="footerBrand">
+            <img src="" alt="Architecture Life">
+            <p>Un Museo Vivo de Admiración.<br> Descubre, aprende e inspírate con una curaduría excepcional de
+                arquitectura y diseño que transforma espacios en experiencias memorables</p>
+        </section>
+
+        <nav class="footerNav">
+            <ul>
+                <li><strong>Explorar</strong></li>
+                <li><a href="#">Awards</a></li>
+                <li><a href="#">Diseño</a></li>
+                <li><a href="#">Arquitectura</a></li>
+            </ul>
+
+            <ul>
+                <li><strong>Contacto</strong></li>
+                <li>info@architecturelife.com</li>
+                <li>+123 900 000 000</li>
+            </ul>
+        </nav>
+
+    </footer>
+*/
 
